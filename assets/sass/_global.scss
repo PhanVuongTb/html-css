@@ -1,0 +1,160 @@
+/* Start Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url(fonts/MYRIADPRO-REGULAR.OTF);
+}
+$blue: #bababa;
+:root {
+  --ff_Yeseva_One: 'Yeseva One', cursive;
+  --ff_MyriadPro: 'MyriadPro', sans-serif;
+  --primary: ;
+  --black: #232426;
+  --green: #008337;
+  --yellow: #fcff00;
+  --white: #fff;
+}
+
+body {
+  font-family: var(--ff_Yeseva_One);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.container {
+  @media (min-width: 1440px) {
+    max-width: 1370px;
+  }
+  @media (min-width: 1680px) {
+    max-width: 1440px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 6px solid transparent;
+  padding: 20px 40px;
+  border-radius: 40px;
+  transition: all 0.5s ease-out;
+  &-banner, &-section {
+    color: var(--yellow);
+    background: linear-gradient(to top, #00933E 0%, #00933E 70%, #36AD56 80%, #1BA04A 90%, #00933E 100%);
+    background-size: cover;
+    min-width: 420px;
+    height: 80px;
+    font-size: 33px;
+    border-color: rgba($color: #b4ddac, $alpha: 0.5);
+    @include breakpoint(1679) {
+      font-size: 30px;
+    }
+    @include breakpoint(1439) {
+      font-size: 28px;
+      height: 70px;
+      min-width: 360px;
+    }
+    @include breakpoint(991) {
+      font-size: 24px;
+      height: 60px;
+      min-width: 320px;
+    }
+    @include breakpoint(575) {
+      font-size: 22px;
+      height: 50px;
+      min-width: 300px;
+      padding: 8px 20px;
+    }
+    @include breakpoint(479) {
+      font-size: 20px;
+      min-width: auto;
+    }
+    @include breakpoint(374) {
+      font-size: 18px;
+      min-width: auto;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: -6px;
+      background: url(../images/button-background.png) center no-repeat;
+      background-size: cover;
+      width: 296px;
+      height: 80px;
+      pointer-events: none;
+      @include breakpoint(1439) {
+        width: 260px;
+        height: 70px;
+      }
+      @include breakpoint(991) {
+        width: 220px;
+        height: 60px;
+      }
+      @include breakpoint(575) {
+        width: 180px;
+        height: 50px;
+      }
+    }
+    &:hover {
+      background: linear-gradient(to bottom, #00933E 0%, #00933E 70%, #36AD56 80%, #1BA04A 90%, #00933E 100%);
+      color: var(--yellow);
+    }
+  }
+  &-section {
+    color: #035900;
+    background: linear-gradient(to bottom, #d3f7a6 0%, #82D321 50%, #87D628 65%, #A7E35F 100%);
+    border-color: rgba($color: #1c5c18, $alpha: 0.4);
+    &:hover {
+      color: #035900;
+      background: linear-gradient(to top, #d3f7a6 0%, #82D321 50%, #87D628 65%, #A7E35F 100%);
+    }
+  }
+  img {
+    margin-right: 10px;
+    @include breakpoint(575) {
+      max-width: 12%;
+    }
+  }
+}
+/* End Reset CSS */
